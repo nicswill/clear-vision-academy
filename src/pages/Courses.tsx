@@ -80,27 +80,25 @@ function Courses() {
 
             <div className="flex items-center gap-4">
               <Link
-                to="/dashboard"
+                to="/"
                 className="text-[#0a1628] px-4 py-2 rounded-lg font-semibold hover:bg-[#d4af37]/10 transition-all"
               >
-                Dashboard
+                Home
               </Link>
               <Link
-                to="/courses"
+                to="/certification"
                 className="text-[#0a1628] px-4 py-2 rounded-lg font-semibold hover:bg-[#d4af37]/10 transition-all"
               >
-                Courses
+                Certification
               </Link>
               <Link
                 to="/assessments"
-                className="border-2 border-[#d4af37] text-[#0a1628] px-5 py-2 rounded-lg font-semibold hover:bg-[#d4af37]/10 transition-all"
+                className="text-[#0a1628] px-4 py-2 rounded-lg font-semibold hover:bg-[#d4af37]/10 transition-all"
               >
                 Assessments
               </Link>
               <a
-                href="https://clearvisionleader.com/login/"
-                target="_blank"
-                rel="noreferrer"
+                href="https://clearvisionleader.com/student-portal/"
                 className="bg-gradient-to-r from-[#d4af37] to-[#b8941f] text-white px-5 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#d4af37]/30 transition-all"
               >
                 Student Login

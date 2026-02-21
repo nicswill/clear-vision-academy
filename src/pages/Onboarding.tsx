@@ -25,21 +25,25 @@ function Onboarding() {
 
             <div className="flex items-center gap-4">
               <Link
-                to="/dashboard"
+                to="/"
                 className="text-[#0a1628] px-4 py-2 rounded-lg font-semibold hover:bg-[#d4af37]/10 transition-all"
               >
-                Dashboard
+                Home
               </Link>
               <Link
-                to="/courses"
+                to="/certification"
                 className="text-[#0a1628] px-4 py-2 rounded-lg font-semibold hover:bg-[#d4af37]/10 transition-all"
               >
-                Courses
+                Certification
+              </Link>
+              <Link
+                to="/assessments"
+                className="text-[#0a1628] px-4 py-2 rounded-lg font-semibold hover:bg-[#d4af37]/10 transition-all"
+              >
+                Assessments
               </Link>
               <a
-                href="https://clearvisionleader.com/login/"
-                target="_blank"
-                rel="noreferrer"
+                href="https://clearvisionleader.com/student-portal/"
                 className="bg-gradient-to-r from-[#d4af37] to-[#b8941f] text-white px-5 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#d4af37]/30 transition-all"
               >
                 Student Login
@@ -149,6 +153,29 @@ function Onboarding() {
                 </div>
               </div>
             </div>
+
+            <div className="bg-white rounded-2xl p-8 border-2 border-[#d4af37]/30 shadow-lg">
+              <div className="flex items-start space-x-6">
+                <div className="flex-shrink-0">
+                  <div className="bg-gray-300 rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl text-gray-600">
+                    4
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h2 className="text-2xl font-bold mb-3 text-[#0a1628] flex items-center space-x-3">
+                    <CheckCircle className="w-8 h-8 text-gray-400" />
+                    <span>Course Placement Recommendation</span>
+                  </h2>
+                  <p className="text-gray-700 mb-4">
+                    Based on your assessment results, we'll recommend the best courses and learning path for
+                    your leadership development goals.
+                  </p>
+                  <div className="bg-gray-50 rounded-xl p-6 border-2 border-gray-200">
+                    <p className="text-gray-500 text-sm italic">Recommendations available after assessment completion</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="bg-gradient-to-r from-[#d4af37] to-[#b8941f] rounded-2xl p-8 text-center shadow-xl">
@@ -156,13 +183,21 @@ function Onboarding() {
             <p className="text-lg text-[#0a1628] mb-6">
               Head to your dashboard to explore courses and continue your journey.
             </p>
-            <Link
-              to="/dashboard"
-              className="inline-flex items-center justify-center bg-[#0a1628] text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#1e3a5f] transition-all shadow-xl space-x-2"
-            >
-              <span>Go to Dashboard</span>
-              <ArrowRight className="w-5 h-5" />
-            </Link>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link
+                to="/dashboard"
+                className="inline-flex items-center justify-center bg-[#0a1628] text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#1e3a5f] transition-all shadow-xl space-x-2"
+              >
+                <span>Continue to Dashboard</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link
+                to="/certification"
+                className="inline-flex items-center justify-center bg-white text-[#0a1628] px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all border-2 border-[#0a1628]"
+              >
+                Back to Certification Hub
+              </Link>
+            </div>
           </div>
 
           <div className="mt-12 grid sm:grid-cols-3 gap-4">

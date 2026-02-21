@@ -13,6 +13,7 @@ import PowerPauseAssessment from './pages/PowerPauseAssessment.tsx';
 import WholeHealthAssessment from './pages/WholeHealthAssessment.tsx';
 import Dashboard from './pages/Dashboard.tsx';
 import Onboarding from './pages/Onboarding.tsx';
+import CertificationHub from './pages/CertificationHub.tsx';
 import Courses from './pages/Courses.tsx';
 import CourseWholeHealth from './pages/CourseWholeHealth.tsx';
 import CourseP3Method from './pages/CourseP3Method.tsx';
@@ -20,6 +21,19 @@ import CoursePermissionToPause from './pages/CoursePermissionToPause.tsx';
 import CourseVisionBuilders from './pages/CourseVisionBuilders.tsx';
 import CourseDevotional from './pages/CourseDevotional.tsx';
 import LearnDash from './pages/LearnDash.tsx';
+import Week0 from './pages/Week0.tsx';
+import Week1 from './pages/Week1.tsx';
+import Week2 from './pages/Week2.tsx';
+import Week3 from './pages/Week3.tsx';
+import Week4 from './pages/Week4.tsx';
+import Week5 from './pages/Week5.tsx';
+import Week6 from './pages/Week6.tsx';
+import Week7 from './pages/Week7.tsx';
+import Week8 from './pages/Week8.tsx';
+import Week9 from './pages/Week9.tsx';
+import Week10 from './pages/Week10.tsx';
+import Week11 from './pages/Week11.tsx';
+import Week12 from './pages/Week12.tsx';
 
 import './index.css';
 
@@ -98,6 +112,22 @@ createRoot(document.getElementById('root')!).render(
         {/* Dashboard & Onboarding */}
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/onboarding" element={<Onboarding />} />
+
+        {/* Certification Hub */}
+        <Route path="/certification" element={<CertificationHub />} />
+        <Route path="/certification/week-0" element={<Week0 />} />
+        <Route path="/certification/week-1" element={<Week1 />} />
+        <Route path="/certification/week-2" element={<Week2 />} />
+        <Route path="/certification/week-3" element={<Week3 />} />
+        <Route path="/certification/week-4" element={<Week4 />} />
+        <Route path="/certification/week-5" element={<Week5 />} />
+        <Route path="/certification/week-6" element={<Week6 />} />
+        <Route path="/certification/week-7" element={<Week7 />} />
+        <Route path="/certification/week-8" element={<Week8 />} />
+        <Route path="/certification/week-9" element={<Week9 />} />
+        <Route path="/certification/week-10" element={<Week10 />} />
+        <Route path="/certification/week-11" element={<Week11 />} />
+        <Route path="/certification/week-12" element={<Week12 />} />
 
         {/* Courses */}
         <Route path="/courses" element={<Courses />} />

@@ -71,33 +71,31 @@ function App() {
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center gap-4">
               <Link
-                to="/dashboard"
+                to="/"
                 onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}
                 className="text-[#0a1628] px-4 py-3 rounded-lg font-semibold hover:bg-[#d4af37]/10 transition-all"
               >
-                Dashboard
+                Home
               </Link>
 
               <Link
-                to="/courses"
+                to="/certification"
                 onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}
                 className="text-[#0a1628] px-4 py-3 rounded-lg font-semibold hover:bg-[#d4af37]/10 transition-all"
               >
-                Courses
+                Certification
               </Link>
 
               <Link
                 to="/assessments"
                 onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}
-                className="border-2 border-[#d4af37] text-[#0a1628] px-5 py-3 rounded-lg font-semibold hover:bg-[#d4af37]/10 transition-all"
+                className="text-[#0a1628] px-4 py-3 rounded-lg font-semibold hover:bg-[#d4af37]/10 transition-all"
               >
                 Assessments
               </Link>
 
               <a
-                href="https://clearvisionleader.com/login/"
-                target="_blank"
-                rel="noreferrer"
+                href="https://clearvisionleader.com/student-portal/"
                 className="bg-gradient-to-r from-[#d4af37] to-[#b8941f] text-white px-5 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#d4af37]/30 transition-all"
               >
                 Student Login
@@ -127,38 +125,40 @@ function App() {
             <div className="md:hidden py-4 border-t border-[#d4af37]/20">
               <div className="flex flex-col space-y-3">
                 <Link
-                  to="/dashboard"
+                  to="/"
                   onClick={() => {
                     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
                     setMobileMenuOpen(false);
                   }}
                   className="text-[#0a1628] px-6 py-3 rounded-lg font-semibold text-center hover:bg-[#d4af37]/10 transition-all"
                 >
-                  Dashboard
+                  Home
                 </Link>
 
                 <Link
-                  to="/courses"
+                  to="/certification"
                   onClick={() => {
                     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
                     setMobileMenuOpen(false);
                   }}
                   className="text-[#0a1628] px-6 py-3 rounded-lg font-semibold text-center hover:bg-[#d4af37]/10 transition-all"
                 >
-                  Courses
+                  Certification
                 </Link>
 
-                <button
-                  onClick={goToAssessments}
-                  className="border-2 border-[#d4af37] text-[#0a1628] px-6 py-3 rounded-lg font-semibold text-center hover:bg-[#d4af37]/10 transition-all"
+                <Link
+                  to="/assessments"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+                    setMobileMenuOpen(false);
+                  }}
+                  className="text-[#0a1628] px-6 py-3 rounded-lg font-semibold text-center hover:bg-[#d4af37]/10 transition-all"
                 >
                   Assessments
-                </button>
+                </Link>
 
                 <a
-                  href="https://clearvisionleader.com/login/"
-                  target="_blank"
-                  rel="noreferrer"
+                  href="https://clearvisionleader.com/student-portal/"
                   onClick={() => setMobileMenuOpen(false)}
                   className="bg-gradient-to-r from-[#d4af37] to-[#b8941f] text-white px-6 py-3 rounded-lg font-semibold text-center"
                 >
