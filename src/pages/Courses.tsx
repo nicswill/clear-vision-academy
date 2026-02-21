@@ -15,8 +15,8 @@ function Courses() {
     {
       id: 'whole-health-leadership',
       icon: <BookOpen className="w-12 h-12 text-[#d4af37]" />,
-      title: 'Whole Health Leadership™',
-      description: 'Master the foundational framework for leading with clarity, wholeness, and sustainable impact. Align vision, values, and execution.',
+      title: 'Rhythm of Whole Health Leadership™',
+      description: 'Master the foundational framework for leading with clarity, wholeness, execution, and legacy. Align vision, values, and sustainable impact.',
       modules: '6 Modules',
       duration: '8 Weeks',
       level: 'Foundation',

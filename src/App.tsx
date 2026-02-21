@@ -573,24 +573,29 @@ function App() {
                 icon: <Target className="w-12 h-12 text-[#d4af37] mb-4" />,
                 title: 'P3 Method®',
                 sub: 'Pause → Plan → Proceed',
-                body: 'Strategic decision-making framework for intentional leadership'
+                body: 'Strategic decision-making framework for intentional leadership',
+                to: '/courses/p3-method'
               },
               {
                 icon: <Sparkles className="w-12 h-12 text-[#d4af37] mb-4" />,
                 title: 'Rhythm of Whole Health Leadership™',
                 sub: 'Clarity • Wholeness • Execution • Legacy',
-                body: 'Holistic approach to sustainable leadership excellence'
+                body: 'Holistic approach to sustainable leadership excellence',
+                to: '/courses/whole-health-leadership'
               },
               {
                 icon: <Clock className="w-12 h-12 text-[#d4af37] mb-4" />,
                 title: 'Permission to Pause™',
                 sub: 'Reset, breathe, and lead from clarity',
-                body: 'Burnout prevention and leadership renewal methodology'
+                body: 'Burnout prevention and leadership renewal methodology',
+                to: '/courses/permission-to-pause'
               }
             ].map((card, idx) => (
-              <div
+              <Link
                 key={idx}
-                className="group relative bg-white text-[#0a1628] rounded-2xl p-8 border-2 border-[#d4af37] shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+                to={card.to}
+                onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}
+                className="group relative bg-white text-[#0a1628] rounded-2xl p-8 border-2 border-[#d4af37] shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl cursor-pointer"
               >
                 <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-[0_0_45px_rgba(212,175,55,0.20)]" />
                 <div className="relative">
@@ -599,7 +604,7 @@ function App() {
                   <p className="text-xl font-semibold text-[#d4af37] mb-4">{card.sub}</p>
                   <p className="text-gray-700">{card.body}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 

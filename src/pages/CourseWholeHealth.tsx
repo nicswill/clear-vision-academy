@@ -117,9 +117,9 @@ function CourseWholeHealth() {
 
           <div className="bg-gradient-to-br from-[#0a1628] to-[#1e3a5f] rounded-2xl p-8 border-2 border-[#d4af37] shadow-xl mb-12">
             <BookOpen className="w-16 h-16 text-[#d4af37] mb-4" />
-            <h1 className="text-4xl font-bold text-white mb-4">Whole Health Leadership™</h1>
+            <h1 className="text-4xl font-bold text-white mb-4">Rhythm of Whole Health Leadership™</h1>
             <p className="text-xl text-gray-200 mb-6">
-              Master the foundational framework for leading with clarity, wholeness, and sustainable impact.
+              Master the foundational framework for leading with clarity, wholeness, execution, and legacy.
             </p>
 
             <div className="flex flex-wrap gap-3 mb-6">
