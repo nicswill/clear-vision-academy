@@ -70,12 +70,21 @@ function App() {
 
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center gap-4">
-              <button
-                onClick={() => scrollToSection('courses')}
-                className="border-2 border-[#d4af37] text-[#0a1628] px-5 py-3 rounded-lg font-semibold hover:bg-[#d4af37]/10 transition-all"
+              <Link
+                to="/dashboard"
+                onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}
+                className="text-[#0a1628] px-4 py-3 rounded-lg font-semibold hover:bg-[#d4af37]/10 transition-all"
+              >
+                Dashboard
+              </Link>
+
+              <Link
+                to="/courses"
+                onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}
+                className="text-[#0a1628] px-4 py-3 rounded-lg font-semibold hover:bg-[#d4af37]/10 transition-all"
               >
                 Courses
-              </button>
+              </Link>
 
               <Link
                 to="/assessments"
@@ -89,7 +98,7 @@ function App() {
                 href="https://clearvisionleader.com/login/"
                 target="_blank"
                 rel="noreferrer"
-                className="border-2 border-[#d4af37] text-[#0a1628] px-5 py-3 rounded-lg font-semibold hover:bg-[#d4af37]/10 transition-all"
+                className="bg-gradient-to-r from-[#d4af37] to-[#b8941f] text-white px-5 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#d4af37]/30 transition-all"
               >
                 Student Login
               </a>
@@ -97,9 +106,9 @@ function App() {
               {/* Desktop CTA Button */}
               <button
                 onClick={() => setShowEnrollmentForm(true)}
-                className="bg-gradient-to-r from-[#d4af37] to-[#b8941f] text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#d4af37]/30 transition-all"
+                className="border-2 border-[#d4af37] text-[#0a1628] px-6 py-3 rounded-lg font-semibold hover:bg-[#d4af37]/10 transition-all"
               >
-                Request Enrollment Info
+                Request Info
               </button>
             </div>
 
@@ -117,12 +126,27 @@ function App() {
           {mobileMenuOpen && (
             <div className="md:hidden py-4 border-t border-[#d4af37]/20">
               <div className="flex flex-col space-y-3">
-                <button
-                  onClick={() => scrollToSection('courses')}
-                  className="border-2 border-[#d4af37] text-[#0a1628] px-6 py-3 rounded-lg font-semibold text-center hover:bg-[#d4af37]/10 transition-all"
+                <Link
+                  to="/dashboard"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+                    setMobileMenuOpen(false);
+                  }}
+                  className="text-[#0a1628] px-6 py-3 rounded-lg font-semibold text-center hover:bg-[#d4af37]/10 transition-all"
+                >
+                  Dashboard
+                </Link>
+
+                <Link
+                  to="/courses"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+                    setMobileMenuOpen(false);
+                  }}
+                  className="text-[#0a1628] px-6 py-3 rounded-lg font-semibold text-center hover:bg-[#d4af37]/10 transition-all"
                 >
                   Courses
-                </button>
+                </Link>
 
                 <button
                   onClick={goToAssessments}
@@ -136,7 +160,7 @@ function App() {
                   target="_blank"
                   rel="noreferrer"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="border-2 border-[#d4af37] text-[#0a1628] px-6 py-3 rounded-lg font-semibold text-center hover:bg-[#d4af37]/10 transition-all"
+                  className="bg-gradient-to-r from-[#d4af37] to-[#b8941f] text-white px-6 py-3 rounded-lg font-semibold text-center"
                 >
                   Student Login
                 </a>
@@ -146,9 +170,9 @@ function App() {
                     setShowEnrollmentForm(true);
                     setMobileMenuOpen(false);
                   }}
-                  className="bg-gradient-to-r from-[#d4af37] to-[#b8941f] text-white px-6 py-3 rounded-lg font-semibold text-center"
+                  className="border-2 border-[#d4af37] text-[#0a1628] px-6 py-3 rounded-lg font-semibold text-center hover:bg-[#d4af37]/10 transition-all"
                 >
-                  Request Enrollment Info
+                  Request Info
                 </button>
               </div>
             </div>

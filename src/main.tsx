@@ -11,6 +11,15 @@ import P3LeadershipAssessment from './pages/P3LeadershipAssessment.tsx';
 import VisionClarityAssessment from './pages/VisionClarityAssessment.tsx';
 import PowerPauseAssessment from './pages/PowerPauseAssessment.tsx';
 import WholeHealthAssessment from './pages/WholeHealthAssessment.tsx';
+import Dashboard from './pages/Dashboard.tsx';
+import Onboarding from './pages/Onboarding.tsx';
+import Courses from './pages/Courses.tsx';
+import CourseWholeHealth from './pages/CourseWholeHealth.tsx';
+import CourseP3Method from './pages/CourseP3Method.tsx';
+import CoursePermissionToPause from './pages/CoursePermissionToPause.tsx';
+import CourseVisionBuilders from './pages/CourseVisionBuilders.tsx';
+import CourseDevotional from './pages/CourseDevotional.tsx';
+import LearnDash from './pages/LearnDash.tsx';
 
 import './index.css';
 
@@ -53,10 +62,17 @@ function NotFound() {
           </Link>
 
           <Link
-            to="/assessments"
+            to="/dashboard"
             className="border-2 border-[#d4af37] text-[#0a1628] px-6 py-3 rounded-lg font-bold hover:bg-[#d4af37]/10 transition-all"
           >
-            Assessments Hub
+            Dashboard
+          </Link>
+
+          <Link
+            to="/courses"
+            className="border-2 border-[#d4af37] text-[#0a1628] px-6 py-3 rounded-lg font-bold hover:bg-[#d4af37]/10 transition-all"
+          >
+            Courses
           </Link>
         </div>
       </div>
@@ -79,7 +95,22 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/thank-you-overview" element={<ThankYouOverview />} />
         <Route path="/thank-you-assessment" element={<ThankYouAssessment />} />
 
-                {/* Assessments Hub */}
+        {/* Dashboard & Onboarding */}
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/onboarding" element={<Onboarding />} />
+
+        {/* Courses */}
+        <Route path="/courses" element={<Courses />} />
+        <Route path="/courses/whole-health-leadership" element={<CourseWholeHealth />} />
+        <Route path="/courses/p3-method" element={<CourseP3Method />} />
+        <Route path="/courses/permission-to-pause" element={<CoursePermissionToPause />} />
+        <Route path="/courses/vision-builders-youth" element={<CourseVisionBuilders />} />
+        <Route path="/courses/devotional-track" element={<CourseDevotional />} />
+
+        {/* LearnDash Integration */}
+        <Route path="/learn-dash" element={<LearnDash />} />
+
+        {/* Assessments Hub */}
         <Route path="/assessments" element={<AssessmentsHub />} />
 
         {/* Individual Assessments (NEW, plural) */}
