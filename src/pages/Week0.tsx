@@ -325,7 +325,6 @@ function Week0() {
                           src="/39E8BEF0-F16E-4709-9832-2C654597A45D.PNG"
                           alt="Clear Vision Academy Logo"
                           className="h-32 w-auto"
-                          style={{ mixBlendMode: 'multiply' }}
                         />
                       </div>
 
