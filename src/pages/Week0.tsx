@@ -328,6 +328,42 @@ function Week0() {
                         />
                       </div>
 
+                      <div className="bg-white/95 rounded-lg p-6 space-y-6 text-gray-800">
+                        <h4 className="text-2xl font-bold text-[#0a1628] text-center mb-4">Statement of Faith</h4>
+
+                        <div className="space-y-4">
+                          <div>
+                            <h5 className="font-bold text-[#d4af37] text-lg mb-2">The Holy Scriptures</h5>
+                            <p className="leading-relaxed">
+                              We believe that the Bible is God-breathed (and without error) is useful for teaching, rebuking,
+                              correcting and training in righteousness according to 2 Timothy 3:16.
+                            </p>
+                          </div>
+
+                          <div>
+                            <h5 className="font-bold text-[#d4af37] text-lg mb-2">The Trinity</h5>
+                            <p className="leading-relaxed">
+                              We believe there is one God, who eternally exists in three persons- the Father, the Son and the Holy Spirit,
+                              co-equal in power and glory, having precisely the same nature, and attributes, and worthy of the same worship,
+                              confidence and obedience. God the Father is the absolute and highest Ruler of the universe. He reigns over
+                              creation, providence and redemption. (Matt. 28:18-19; Mark 12:29; John 1:1,14; Acts 5:3-4; 2 Cor. 13:14;
+                              Heb. 1:1-3; Rev. 1:4-6; I Cor. 8:6; 2 Chron. 29:11-13; Psa. 103:19; Eph. 1:3-6)
+                            </p>
+                          </div>
+
+                          <div>
+                            <h5 className="font-bold text-[#d4af37] text-lg mb-2">Jesus Christ</h5>
+                            <p className="leading-relaxed">
+                              We believe that Jesus Christ is Lord, Savior and the Redeemer of mankind. We believe that Jesus Christ was
+                              on earth as both God and Man (Phil. 2:6-8; Rom. 8:3). God became like men in the person of Jesus Christ
+                              (Heb. 2:14-17). He was a man of flesh and bones like all men (John 1:14), yet He was God in that He existed
+                              before time began, as God (John 1:1-2). He entered earth by being born of a virgin, conceived by the Holy
+                              Spirit (Luke 1:35; Matt. 1:20), and He was on earth, God in the form of a man.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
                       <div className="bg-white/95 rounded-lg p-6 space-y-4 text-gray-800">
                         <h4 className="text-2xl font-bold text-[#0a1628] text-center mb-4">Clear Vision Academy Coaching Agreement</h4>
 
