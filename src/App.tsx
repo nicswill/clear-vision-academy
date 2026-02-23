@@ -20,6 +20,7 @@ import {
   Sparkles
 } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
+import { isEnrolled } from './components/ProtectedRoute';
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -94,6 +95,16 @@ function App() {
                 Assessments
               </Link>
 
+              {isEnrolled() && (
+                <Link
+                  to="/certification/week-1"
+                  onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}
+                  className="text-[#0a1628] px-4 py-3 rounded-lg font-semibold hover:bg-[#d4af37]/10 transition-all"
+                >
+                  Student Modules
+                </Link>
+              )}
+
               <a
                 href="https://clearvisionleader.com/student-portal/"
                 className="bg-gradient-to-r from-[#d4af37] to-[#b8941f] text-white px-5 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#d4af37]/30 transition-all"
@@ -156,6 +167,19 @@ function App() {
                 >
                   Assessments
                 </Link>
+
+                {isEnrolled() && (
+                  <Link
+                    to="/certification/week-1"
+                    onClick={() => {
+                      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+                      setMobileMenuOpen(false);
+                    }}
+                    className="text-[#0a1628] px-6 py-3 rounded-lg font-semibold text-center hover:bg-[#d4af37]/10 transition-all"
+                  >
+                    Student Modules
+                  </Link>
+                )}
 
                 <a
                   href="https://clearvisionleader.com/student-portal/"

@@ -35,6 +35,7 @@ import Week10 from './pages/Week10.tsx';
 import Week11 from './pages/Week11.tsx';
 import Week12 from './pages/Week12.tsx';
 import EnrollmentTest from './pages/EnrollmentTest.tsx';
+import ProtectedRoute from './components/ProtectedRoute.tsx';
 
 import './index.css';
 
@@ -117,19 +118,19 @@ createRoot(document.getElementById('root')!).render(
 
         {/* Certification Hub */}
         <Route path="/certification" element={<CertificationHub />} />
-        <Route path="/certification/week-0" element={<Week0 />} />
-        <Route path="/certification/week-1" element={<Week1 />} />
-        <Route path="/certification/week-2" element={<Week2 />} />
-        <Route path="/certification/week-3" element={<Week3 />} />
-        <Route path="/certification/week-4" element={<Week4 />} />
-        <Route path="/certification/week-5" element={<Week5 />} />
-        <Route path="/certification/week-6" element={<Week6 />} />
-        <Route path="/certification/week-7" element={<Week7 />} />
-        <Route path="/certification/week-8" element={<Week8 />} />
-        <Route path="/certification/week-9" element={<Week9 />} />
-        <Route path="/certification/week-10" element={<Week10 />} />
-        <Route path="/certification/week-11" element={<Week11 />} />
-        <Route path="/certification/week-12" element={<Week12 />} />
+        <Route path="/certification/week-0" element={<ProtectedRoute><Week0 /></ProtectedRoute>} />
+        <Route path="/certification/week-1" element={<ProtectedRoute><Week1 /></ProtectedRoute>} />
+        <Route path="/certification/week-2" element={<ProtectedRoute><Week2 /></ProtectedRoute>} />
+        <Route path="/certification/week-3" element={<ProtectedRoute><Week3 /></ProtectedRoute>} />
+        <Route path="/certification/week-4" element={<ProtectedRoute><Week4 /></ProtectedRoute>} />
+        <Route path="/certification/week-5" element={<ProtectedRoute><Week5 /></ProtectedRoute>} />
+        <Route path="/certification/week-6" element={<ProtectedRoute><Week6 /></ProtectedRoute>} />
+        <Route path="/certification/week-7" element={<ProtectedRoute><Week7 /></ProtectedRoute>} />
+        <Route path="/certification/week-8" element={<ProtectedRoute><Week8 /></ProtectedRoute>} />
+        <Route path="/certification/week-9" element={<ProtectedRoute><Week9 /></ProtectedRoute>} />
+        <Route path="/certification/week-10" element={<ProtectedRoute><Week10 /></ProtectedRoute>} />
+        <Route path="/certification/week-11" element={<ProtectedRoute><Week11 /></ProtectedRoute>} />
+        <Route path="/certification/week-12" element={<ProtectedRoute><Week12 /></ProtectedRoute>} />
 
         {/* Courses */}
         <Route path="/courses" element={<Courses />} />

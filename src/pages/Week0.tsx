@@ -1,5 +1,5 @@
-import { Link, useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import {
   ArrowRight,
   BookOpen,
@@ -19,14 +19,6 @@ function Week0() {
   const [agreedToTerms, setAgreedToTerms] = useState(false);
   const [signerName, setSignerName] = useState('');
   const [signatureDate, setSignatureDate] = useState('');
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const isEnrolled = localStorage.getItem('cva_enrolled') === 'true';
-    if (!isEnrolled) {
-      navigate('/certification');
-    }
-  }, [navigate]);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-white text-[#0a1628]">
