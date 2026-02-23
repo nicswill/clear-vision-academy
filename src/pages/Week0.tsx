@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import {
   ArrowRight,
   BookOpen,
@@ -10,13 +10,23 @@ import {
   CheckCircle2,
   Shield,
   Heart,
-  Users
+  Users,
+  ExternalLink,
+  Video
 } from 'lucide-react';
 
 function Week0() {
   const [agreedToTerms, setAgreedToTerms] = useState(false);
   const [signerName, setSignerName] = useState('');
   const [signatureDate, setSignatureDate] = useState('');
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const isEnrolled = localStorage.getItem('cva_enrolled') === 'true';
+    if (!isEnrolled) {
+      navigate('/certification');
+    }
+  }, [navigate]);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-white text-[#0a1628]">
@@ -65,10 +75,10 @@ function Week0() {
           <div className="mb-8">
             <div className="flex items-center space-x-4 mb-4">
               <div className="bg-[#d4af37] text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-2xl flex-shrink-0">
-                0
+                1
               </div>
               <div>
-                <h1 className="text-4xl font-bold text-[#d4af37]">Week 0</h1>
+                <h1 className="text-4xl font-bold text-[#d4af37]">Week 1</h1>
                 <p className="text-2xl font-bold text-[#0a1628] mt-1">Pre-Work & Orientation</p>
               </div>
             </div>
@@ -102,6 +112,31 @@ function Week0() {
                     <span className="text-gray-700">Set personal learning goals for the 12-week certification journey</span>
                   </li>
                 </ul>
+              </div>
+            </div>
+          </section>
+
+          <section className="bg-white rounded-2xl p-8 border-2 border-[#d4af37]/30 shadow-lg mb-8">
+            <div className="flex items-start space-x-4 mb-6">
+              <FileText className="w-8 h-8 text-[#d4af37] flex-shrink-0 mt-1" />
+              <div>
+                <h2 className="text-2xl font-bold mb-4 text-[#0a1628]">Coach Trainee Information Form</h2>
+                <p className="text-gray-700 mb-4 leading-relaxed">
+                  Please complete the CVA Coach Trainee Information Form before our first live class session.
+                  This helps Coach Kay and faculty better support you during training.
+                </p>
+                <a
+                  href="https://docs.google.com/forms/d/1Ou78qWzc_mM4I0kwFaeNCpLhW8Il-NYTMkLA-COiZRM/viewform"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#d4af37] to-[#b8941f] text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#d4af37]/30 transition-all"
+                >
+                  <span>Complete the Get To Know You Form</span>
+                  <ExternalLink className="w-5 h-5" />
+                </a>
+                <p className="text-xs text-gray-600 mt-3 italic">
+                  Note: This form may require Google sign-in due to file upload (professional headshot).
+                </p>
               </div>
             </div>
           </section>
@@ -157,11 +192,11 @@ function Week0() {
                       <div className="bg-white rounded-lg p-4 border border-[#d4af37]/20">
                         <h4 className="font-bold text-[#0a1628] mb-2">Program Structure:</h4>
                         <ul className="space-y-2 text-sm">
-                          <li><strong>Week 0:</strong> Orientation & Foundation</li>
-                          <li><strong>Weeks 1-3:</strong> Coaching Foundations & Competencies 1-3</li>
-                          <li><strong>Weeks 4-6:</strong> Advanced Competencies & Communication Skills</li>
-                          <li><strong>Weeks 7-9:</strong> Mastering the Coaching Process & Client Management</li>
-                          <li><strong>Weeks 10-12:</strong> Business Development & Final Certification</li>
+                          <li><strong>Week 1:</strong> Pre-Work & Orientation</li>
+                          <li><strong>Weeks 2-4:</strong> Coaching Foundations & Competencies 1-3</li>
+                          <li><strong>Weeks 5-7:</strong> Advanced Competencies & Communication Skills</li>
+                          <li><strong>Weeks 8-10:</strong> Mastering the Coaching Process & Client Management</li>
+                          <li><strong>Weeks 11-12:</strong> Business Development & Final Certification</li>
                         </ul>
                       </div>
 
@@ -630,6 +665,50 @@ function Week0() {
             </div>
           </section>
 
+          <section className="bg-gradient-to-br from-[#0a1628] to-[#1e3a5f] rounded-2xl p-8 border-2 border-[#d4af37] shadow-lg mb-8">
+            <div className="flex items-start space-x-4 mb-6">
+              <Video className="w-8 h-8 text-[#d4af37] flex-shrink-0 mt-1" />
+              <div>
+                <h2 className="text-2xl font-bold mb-4 text-white">Weekly Videoconference</h2>
+
+                <div className="bg-white/95 rounded-lg p-6 space-y-4 text-gray-800">
+                  <div className="space-y-2">
+                    <p><strong className="text-[#0a1628]">Topic:</strong> Clear Vision Coaching Academy</p>
+                    <p><strong className="text-[#0a1628]">Meeting ID:</strong> 870 3527 8651</p>
+                    <p><strong className="text-[#0a1628]">Passcode:</strong> Clarity</p>
+                    <p><strong className="text-[#0a1628]">Day/Time:</strong> Thursdays 7:00–9:00 PM EST (log in 6:45 PM)</p>
+                  </div>
+
+                  <div className="border-t border-gray-200 pt-4 mt-4">
+                    <h4 className="font-bold text-[#0a1628] mb-2">Session Schedule:</h4>
+                    <ul className="space-y-2 text-sm">
+                      <li className="flex items-start space-x-2">
+                        <span className="text-[#d4af37] font-bold">7:30–8:15</span>
+                        <span>Prayer; Coaching assignments/discussions; Model Coaching</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-[#d4af37] font-bold">8:15–8:20</span>
+                        <span>Break</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-[#d4af37] font-bold">8:20–9:15</span>
+                        <span>Business Discussion</span>
+                      </li>
+                      <li className="flex items-start space-x-2">
+                        <span className="text-[#d4af37] font-bold">9:15–9:30</span>
+                        <span>Wrap up/Prayer/Homework</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <p className="text-xs italic text-gray-600 mt-4 border-t border-gray-200 pt-4">
+                    Coach Kay reserves the right to change the syllabus.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
           <section className="bg-white rounded-2xl p-8 border-2 border-[#d4af37]/30 shadow-lg mb-8">
             <div className="flex items-start space-x-4">
               <Download className="w-8 h-8 text-[#d4af37] flex-shrink-0 mt-1" />
@@ -638,7 +717,7 @@ function Week0() {
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="bg-gray-50 rounded-lg p-4 border border-[#d4af37]/20 hover:border-[#d4af37]/40 transition-all">
                     <FileText className="w-6 h-6 text-[#d4af37] mb-2" />
-                    <p className="font-semibold text-[#0a1628] mb-1">Week 0 Workbook</p>
+                    <p className="font-semibold text-[#0a1628] mb-1">Week 1 Workbook</p>
                     <p className="text-sm text-gray-600 italic">Available after enrollment</p>
                   </div>
                   <div className="bg-gray-50 rounded-lg p-4 border border-[#d4af37]/20 hover:border-[#d4af37]/40 transition-all">
@@ -655,11 +734,11 @@ function Week0() {
             <h2 className="text-2xl font-bold mb-4 text-[#0a1628]">Notes for Coach/Facilitator</h2>
             <div className="bg-white rounded-lg p-6 border border-[#d4af37]/20">
               <div className="space-y-3 text-gray-700">
-                <p className="font-semibold text-[#0a1628]">Week 0 Facilitation Guide:</p>
+                <p className="font-semibold text-[#0a1628]">Week 1 Facilitation Guide:</p>
                 <ul className="space-y-2 ml-4">
                   <li className="flex items-start space-x-2">
                     <span className="text-[#d4af37]">•</span>
-                    <span>Ensure all students have completed and signed the coaching agreement before Week 1</span>
+                    <span>Ensure all students have completed the Get To Know You Form and signed the coaching agreement before Week 1</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <span className="text-[#d4af37]">•</span>

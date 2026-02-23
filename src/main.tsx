@@ -34,6 +34,7 @@ import Week9 from './pages/Week9.tsx';
 import Week10 from './pages/Week10.tsx';
 import Week11 from './pages/Week11.tsx';
 import Week12 from './pages/Week12.tsx';
+import EnrollmentTest from './pages/EnrollmentTest.tsx';
 
 import './index.css';
 
@@ -112,6 +113,7 @@ createRoot(document.getElementById('root')!).render(
         {/* Dashboard & Onboarding */}
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/onboarding" element={<Onboarding />} />
+        <Route path="/enrollment-test" element={<EnrollmentTest />} />
 
         {/* Certification Hub */}
         <Route path="/certification" element={<CertificationHub />} />
